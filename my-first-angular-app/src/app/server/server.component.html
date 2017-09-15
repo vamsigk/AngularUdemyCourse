@@ -1,1 +1,9 @@
+<button type="button" class="btn btn-primary" (click)="onAddServerClick()"> Add Server</button>
 <p>Server with ID {{ serverId }} status is {{ serverStatus}}.</p>
+<p> {{ serverStatus }}</p>
+<label>Server Name : </label> <input type="text" class="form-control" (input)="onTextInput($event)">
+Entered server name is : <p> {{ serverName }} </p>
+<hr>
+<input type="text" name="userName" (input)="onTwoWayBindingClick($event)">
+<p>Entered user name is {{ userName }}</p>
+<button [disabled]="isUserNameEmpty">Check User Name</button>
