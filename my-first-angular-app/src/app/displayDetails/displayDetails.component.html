@@ -1,0 +1,8 @@
+<button type="button"  (click)="onDisplayDetailsBtnClick()"> Display Details</button>
+<p [hidden]="isButtonClick">Displaying the Details of the Student</p>
+<p
+  *ngFor="let x of buttonClicksArray"
+  [ngStyle]="{backgroundColor : x >=5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': x>=5}">{{ x }}
+</p>
+
